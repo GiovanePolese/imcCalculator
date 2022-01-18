@@ -1,0 +1,68 @@
+body {
+  background-color: rgb(236, 236, 236);
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.imc-table {
+  background-color: white;
+
+  width: 70%;
+  border-radius: 10px;
+
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+
+.table-header {
+  font-weight: bold;
+  text-transform: uppercase;
+
+  border-bottom: 3px solid rgb(85, 209, 60);
+}
+
+th {
+  padding: 20px;
+}
+
+.table-row:last-child {
+  border-radius: 8px;
+}
+
+td {
+  padding: 30px;
+}
+
+td:not(:last-child) {
+  border-right: 0.5px dotted rgba(61, 173, 39, 0.3);
+}
+
+.table-row:nth-child(even) {
+  background-color: rgb(85, 209, 60);
+}
+
+.info-nome, .info-peso, .info-altura, .info-gordura, .info-imc {
+  text-align: center;
+}
+
+#botao-calcular {
+  cursor: pointer;
+
+  color: white;
+  background-color: rgb(85, 209, 60);
+  font-weight: bold;
+  font-size: 1rem;
+
+  margin-top: 25px;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 10px;
+}
