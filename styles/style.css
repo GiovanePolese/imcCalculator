@@ -53,16 +53,19 @@ td:not(:last-child) {
   text-align: center;
 }
 
-#botao-calcular {
+.botao {
   cursor: pointer;
 
   color: white;
   background-color: rgb(85, 209, 60);
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 1.5rem;
 
-  margin-top: 25px;
   border: none;
   padding: 10px 30px;
   border-radius: 10px;
+}
+
+#botao-calcular {
+  margin-top: 25px;
 }

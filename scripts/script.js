@@ -3,6 +3,10 @@ const pacientes = document.querySelectorAll(".table-row");
 
 const botao = document.getElementById("botao-calcular");
 
+$(function() {
+  $(".teste").load("./components/pacientesModal.html");
+});
+
 function calculaImc() {
   for (let i = 0; i < pacientes.length; i++) {
     console.log(pacientes[i]);
@@ -20,6 +24,4 @@ function imprimeImc(imc, paciente) {
   paciente.querySelector(".info-imc").innerHTML = imc.toFixed(2);
 }
 
-botao.addEventListener("click",function(){
-  calculaImc();
-});
+botao.addEventListener("click", calculaImc);
