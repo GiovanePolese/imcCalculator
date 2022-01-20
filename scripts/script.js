@@ -1,11 +1,12 @@
 const imc = document.querySelector(".info-imc").textContent;
 const pacientes = document.querySelectorAll(".table-row");
 
-const botao = document.getElementById("botao-calcular");
+const modalPaciente = document.querySelector("#form-adiciona");
+const backdrop = document.querySelector(".backdrop");
 
-$(function() {
-  $(".teste").load("./components/pacientesModal.html");
-});
+const botao = document.getElementById("botao-calcular");
+const botaoModal = document.querySelector("#abrir-modal-paciente");
+
 
 function calculaImc() {
   for (let i = 0; i < pacientes.length; i++) {
@@ -25,3 +26,21 @@ function imprimeImc(imc, paciente) {
 }
 
 botao.addEventListener("click", calculaImc);
+
+let modalAtivo = false;
+
+botaoModal.addEventListener("click", function(){
+  if (!modalAtivo) {
+    modalPaciente.style.display = 'flex';
+    backdrop.style.display = 'block';
+    modalAtivo = true;
+  } 
+});
+
+backdrop.addEventListener("click", function(){
+  if (modalAtivo) {
+    modalPaciente.style.display = 'none';
+    backdrop.style.display = 'none';
+    modalAtivo = false;
+  } 
+});

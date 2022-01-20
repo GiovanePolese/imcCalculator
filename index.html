@@ -11,11 +11,36 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./styles/reset.css">
   <link rel="stylesheet" href="./styles/style.css">
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
+  <div class="backdrop"></div>
+
   <div class="container">
+    <section class="formulario-paciente">
+      <form id="form-adiciona">
+          <h2 id="titulo-form">Adicionar novo paciente</h2>
+
+          <div class="grupo">
+              <label for="nome">Nome:</label>
+              <input id="nome" name="nome" type="text" placeholder="digite o nome do seu paciente" class="campo">
+          </div>
+          <div class="grupo">
+              <label for="peso">Peso:</label>
+              <input id="peso" name="peso" type="text" placeholder="digite o peso do seu paciente" class="campo campo-medio">
+          </div>
+          <div class="grupo">
+              <label for="altura">Altura:</label>
+              <input id="altura" name="altura" type="text" placeholder="digite a altura do seu paciente" class="campo campo-medio">
+          </div>
+          <div class="grupo">
+              <label for="gordura">% de Gordura:</label>
+              <input id="gordura" name="gordura" type="text" placeholder="digite a porcentagem de gordura do seu paciente" class="campo campo-medio">
+          </div>
+
+          <button id="adicionar-paciente" class="botao bto-principal">Adicionar</button>
+      </form>
+    </section>
+
     <table class="imc-table">
       <thead>
         <tr class="table-header">
@@ -49,10 +74,11 @@
       </tr>
     </table>
 
-    <div class="teste">
-      aqui
+    <div class="botoes">
+      <button id="abrir-modal-paciente" class="botao bto-principal">Adicionar</button>
+      <button class="botao" id="botao-calcular">Calcular</button>
     </div>
-    <button class="botao" id="botao-calcular">Calcular</button>
+    
   </div>
   <script src="./scripts/script.js"></script>
 </body>
