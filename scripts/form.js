@@ -36,10 +36,24 @@ botaoAdicionarPaciente.addEventListener("click", function(event){
   event.preventDefault();
 
   let paciente = obtemPacienteFormulario(modalPaciente);
-  const pacienteTr = montaTr(paciente);
+  
+  if (paciente.peso >= 600 || paciente.peso <= 0) {
+    notificationError("Erro", "Valor de peso fora do padrão.");
+    modalPaciente.peso.focus();
+  } else if (paciente.altura >= 3 || paciente.altura <= 0) {
+    notificationError("Erro", "Valor altura fora do padrão.");
+    modalPaciente.altura.focus();
+  } else {
+    const pacienteTr = montaTr(paciente);
 
-  const tabelaPacientes = document.querySelector(".tabela-pacientes");
-  tabelaPacientes.appendChild(pacienteTr);
+    const tabelaPacientes = document.querySelector(".tabela-pacientes");
+    tabelaPacientes.appendChild(pacienteTr);
 
-  fechaModal();
+    fechaModal();
+    notificationSuccess("Sucesso", "Usuário cadastrado com sucesso.");
+    modalPaciente.nome.value = "";
+    modalPaciente.peso.value = "";
+    modalPaciente.altura.value = "";
+    modalPaciente.gordura.value = "";
+  }
 });

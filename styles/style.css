@@ -24,36 +24,6 @@ body {
   overflow-x: auto;
 }
 
-.backdrop {
-  display: none;
-  position: absolute;
-  left: 0; 
-  right: 0;
-  height: 100vh;
-  width: 100vw;
-
-  background-color: rgba(46, 46, 46, 0.7);
-}
-
-#form-adiciona {
-  display: none;
-  position: absolute;
-  padding: 30px;
-  left: 0; 
-  right: 0; 
-  margin-left: auto; 
-  margin-right: auto;
-
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  background-color: white;
-
-  width: 70vh;
-  border-radius: 10px;
-}
-
 .table-header {
   font-weight: bold;
   text-transform: uppercase;
