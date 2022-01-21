@@ -17,6 +17,8 @@ body {
 
   width: 70%;
   border-radius: 10px;
+  -moz-border-radius: 10x;
+  -webkit-border-radius: 10px;
 
   overflow-y: hidden;
   overflow-x: auto;
@@ -61,10 +63,6 @@ body {
 
 th {
   padding: 20px;
-}
-
-.table-row:last-child {
-  border-radius: 8px;
 }
 
 td {
@@ -121,7 +119,8 @@ td:not(:last-child) {
 
 input {
   border: none;
-  background-color: rgb(202, 255, 206);
-  padding: 5px;
+  border-radius: 5px;
+  background-color: rgba(85, 209, 60, 0.1);
+  padding: 8px;
   width: 70%;
 }
