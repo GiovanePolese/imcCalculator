@@ -3,8 +3,14 @@ const pacientes = document.querySelectorAll(".table-row");
 
 const botao = document.getElementById("botao-calcular");
 
+function calculaImc(peso, altura) {
+  let pesoNum = parseInt(peso);
+  let alturaNum = parseFloat(altura);
+  let valorImc = pesoNum / (alturaNum * 2);
+  return valorImc.toFixed(2);
+}
 
-function calculaImc() {
+function calculaImcTabela() {
   for (let i = 0; i < pacientes.length; i++) {
     console.log(pacientes[i]);
     const nome = pacientes[i].querySelector(".info-nome").textContent;
@@ -21,4 +27,4 @@ function imprimeImc(imc, paciente) {
   paciente.querySelector(".info-imc").innerHTML = imc.toFixed(2);
 }
 
-botao.addEventListener("click", calculaImc);
+botao.addEventListener("click", calculaImcTabela);
