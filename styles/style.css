@@ -94,3 +94,20 @@ input {
   padding: 8px;
   width: 70%;
 }
+
+#filtrar-tabela {
+  margin-bottom: 20px;
+
+  background-color: rgba(85, 209, 60, 0.2);
+}
+
+.barraPesquisa {
+  display: flex;
+  justify-content: flex-end;
+
+  width: 70%;
+}
+
+.invisivel {
+  display: none;
+}

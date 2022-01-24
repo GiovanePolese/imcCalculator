@@ -48,8 +48,12 @@
       <p class="texto-notification"></p>
     </section>
 
+    <div class="barraPesquisa">
+      <input type="text" name="filtro" id="filtrar-tabela" placeholder="Digite o nome do paciente">
+    </div>
+
     <table class="imc-table">
-      <thead>
+       <thead>
         <tr class="table-header">
         <th>Nome</th>
         <th>Peso</th>
@@ -92,6 +96,7 @@
   
   <script src="./scripts/modal.js"></script>
   <script src="./scripts/calculaImc.js"></script>
+  <script async src="./scripts/filtra.js"></script>
   <script defer src="./scripts/form.js"></script>
   <script defer src="./scripts/notification.js"></script>
 </body>
