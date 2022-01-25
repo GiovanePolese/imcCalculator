@@ -51,6 +51,10 @@ td:not(:last-child) {
   text-align: center;
 }
 
+.tabela-pacientes {
+  cursor: pointer;
+}
+
 #titulo-form {
   font-size: 2rem;
   font-weight: bold;
@@ -85,6 +89,10 @@ td:not(:last-child) {
   border: none;
   padding: 10px 30px;
   border-radius: 10px;
+}
+
+.excluir {
+  background-color: rgb(255, 45, 45);
 }
 
 input {

@@ -9,6 +9,8 @@ function notificationSuccess(tituloInput, textoInput) {
   notificationBox.classList.add("success");
   notificationBox.style.display = "block";
 
+  notificationBox.style.transform = "translate(10px)";
+
   setTimeout(() => {
     notificationBox.style.display = "none";
     notificationBox.classList.remove("success");
@@ -21,6 +23,8 @@ function notificationError(tituloInput, textoInput) {
 
   notificationBox.classList.add("error");
   notificationBox.style.display = "block";
+
+  notificationBox.style.transform = "translate(10px)";  
 
   setTimeout(() => {
     notificationBox.style.display = "none";
