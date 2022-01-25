@@ -47,6 +47,14 @@ td:not(:last-child) {
   background-color: rgb(85, 209, 60);
 }
 
+.table-row:last-child td:last-child{
+  border-radius: 0px 0px 10px 0px;
+}
+
+.table-row:last-child td:first-child{
+  border-radius: 0px 0px 0px 10px;
+}
+
 .info-nome, .info-peso, .info-altura, .info-gordura, .info-imc {
   text-align: center;
 }

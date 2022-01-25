@@ -36,7 +36,7 @@ tabela.addEventListener("click", function(event) {
     botaoExcluir.addEventListener("click", function() {
         event.target.parentNode.remove();
         fechaModalCliente();
-        notificationSuccess("Sucesso", "Usuário excluído com sucesso!");
+        notificationSuccess("Excluído com sucesso", "Usuário '" + event.target.parentNode.querySelector(".info-nome").textContent + "' excluído com sucesso!");
     });
 
     botaoEditar.addEventListener("click", function() {
@@ -46,7 +46,7 @@ tabela.addEventListener("click", function(event) {
         event.target.parentNode.querySelector(".info-gordura").textContent = document.querySelector("#gorduraCliente").value;
         event.target.parentNode.querySelector(".info-imc").textContent = document.querySelector("#imcCliente").value;
         fechaModalCliente();
-        notificationSuccess("Sucesso", "Usuário editado com sucesso!");
+        notificationSuccess("Editado com sucesso", "Usuário '" + event.target.parentNode.querySelector(".info-nome").textContent + "' editado com sucesso!");
     });
 });
 
