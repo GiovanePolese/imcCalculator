@@ -20,7 +20,7 @@ campoFiltro.addEventListener("input", function() {
     }
   } else {
     for (i = 0; i < pacientes.length; i++) {
-      const paciente = pacientes[1];
+      const paciente = pacientes[i];
       paciente.classList.remove("invisivel");
     }
   }
